@@ -8,7 +8,6 @@ import useCurrentTime from '../../../hooks/useCurrentTime'
 import { toast } from 'react-hot-toast'
 
 
-
 type Props = {}
 const START = '😅 ! 我是GPT，您可以开始问问题了！'
 
@@ -89,7 +88,7 @@ const Chat = (props: Props) => {
         {  
           chats.map((item, idx) => (
             <ChatItem key={idx} words={item.chat} isUser={item.isUser} 
-                      time={item.time?item.time : "Unknown time"} isLoading={item.isLoading}/>
+                      time={item.time?item.time : "正在获取信息"} isLoading={item.isLoading}/>
           ))
         }
       </div>
