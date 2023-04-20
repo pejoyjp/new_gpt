@@ -11,7 +11,9 @@ const Homepage = (props: Props) => {
     const route = useRouter()
     const handleClick = async()=>{
         const res:AxiosResponse<any> = await axios.get('/api/chats')
-        const chatsId:string = res.data
+        const chatsId = res.data
+        console.log(chatsId);
+        
         route.push(`/chats/${chatsId}`)
         console.log(res);
     }
