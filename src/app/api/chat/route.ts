@@ -2,6 +2,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../../firebase";
 import askQuestion from "../../../../libs/gpt";
 import { NextResponse } from "next/server";
+
+
 export async function POST(request: Request) {
     try{
       const res = await request.json()
