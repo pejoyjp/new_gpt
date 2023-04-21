@@ -1,11 +1,7 @@
 import { db } from "../../../../firebase"
-import { NextResponse } from "next/server"
 import { collection, addDoc } from "firebase/firestore"; 
-import { timeStamp } from "console";
 
-type Question = {
-    question:string 
-}
+
 
 export async function GET(request: Request) {
   try{
