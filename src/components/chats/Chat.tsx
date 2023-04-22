@@ -98,12 +98,14 @@ const Chat = (props: Props) => {
         handleSubmit()
       }}
             className='flex w-full justify-center relative'>
-          <textarea   value={value}
+
+              <textarea   value={value}
                       onKeyDown={handleEnter}
                       onChange={(e:React.ChangeEvent<HTMLTextAreaElement>)=>setValue(e.target.value)}
                       className="w-full p-2 text-gray-700 border border-gray-400 
-                                  rounded-lg resize"
-          />
+                                  rounded-lg resize fixed bottom-0"
+              />
+          
           <button type='button'
                   onClick={handleSubmit}
                   className='absolute right-1 bottom-1 hover:text-green-800'>
