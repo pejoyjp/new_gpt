@@ -92,27 +92,27 @@ const Chat = (props: Props) => {
           ))
         }
       </div>
-        
-      <form onSubmit={(e:React.FormEvent<HTMLFormElement>)=>{
-        e.preventDefault()
-        handleSubmit()
-      }}
-            className='flex w-full justify-center relative'>
 
-              <textarea   value={value}
-                      onKeyDown={handleEnter}
-                      onChange={(e:React.ChangeEvent<HTMLTextAreaElement>)=>setValue(e.target.value)}
-                      className="w-full p-2 text-gray-700 border border-gray-400 
-                                  rounded-lg resize fixed bottom-0"
-              />
-          
-          <button type='button'
-                  onClick={handleSubmit}
-                  className='absolute right-1 bottom-1 hover:text-green-800'>
-              <BsSend/>
-          </button>
-      </form>
-    </div>
+        <form onSubmit={(e:React.FormEvent<HTMLFormElement>)=>{
+          e.preventDefault()
+          handleSubmit()
+        }}
+              className='flex w-full justify-center relative '>
+
+                <textarea   value={value}
+                        onKeyDown={handleEnter}
+                        onChange={(e:React.ChangeEvent<HTMLTextAreaElement>)=>setValue(e.target.value)}
+                        className="w-full p-2 text-gray-700 border border-gray-400 
+                                    rounded-lg resize fixed bottom-1"
+                />
+            
+            <button type='button'
+                    onClick={handleSubmit}
+                    className='fixed right-1 bottom-2 hover:text-green-800 '>
+                <BsSend/>
+            </button>
+        </form>
+      </div>
   )
 }
 
